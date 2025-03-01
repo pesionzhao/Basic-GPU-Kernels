@@ -1,0 +1,5 @@
+{
+    "cmake.debugConfig": {
+        "miDebuggerPath": "/usr/local/cuda/bin/cuda-gdb",
+    },
+}
