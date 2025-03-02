@@ -1,3 +1,6 @@
+/***
+check.cu用来调试cuda代码保证正确性，不参与python包的封装
+***/ 
 #include<stdio.h>
 __global__ void _addKernel(float *src1, float *src2, float *dst, int numel);
 

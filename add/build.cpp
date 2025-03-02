@@ -5,10 +5,10 @@ void add(torch::Tensor src1_tensor, torch::Tensor src2_tensor, torch::Tensor dst
 
 PYBIND11_MODULE(TORCH_EXTENSION_NAME, m)
 {
-      // 第一个参数"softmax"表示注册到python模块中的函数名称，可以替换为其他名字，使用方法为：模块.softmax
-      // 第二个参数softmax_nv_f32是上面编写的kernel launch 函数，这里需要获得该函数的地址
-      // 第三个参数"Cuda Core softmax function"是描述性文字，可以修改
-      // 后面的py::arg是用来为softmax定义参数的，这些参数的数目，顺序必须和softmax_nv_f32保持一致，为了增加可读性，最好名字也一致
-      m.def("add_cuda", &add, "Cuda Core softmax function",
+      // 第一个参数表示注册到python模块中的函数名称，可以替换为其他名字，使用方法为：模块.add_cuda
+      // 第二个参数是上面编写的kernel launch 函数，这里需要获得该函数的地址
+      // 第三个参数是函数描述，可以修改
+      // 后面的py::arg是用来为add_cuda定义参数的，这些参数的数目，顺序必须和add保持一致
+      m.def("add_cuda", &add, "Cuda Core add function",
             py::arg("src1"), py::arg("src2"), py::arg("dst"), py::arg("size"));
 }

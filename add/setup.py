@@ -2,7 +2,7 @@ from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import glob
 
-source = glob.glob('./build.cpp') + glob.glob('Add.cu')
+source = glob.glob('./build.cpp') + glob.glob('add.cu')
 # source = glob.glob('./*.cu')
 setup(
     name='add_op',  # 自定义包名
