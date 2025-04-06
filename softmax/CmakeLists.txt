@@ -1,0 +1,4 @@
+add_library(softmax_lib STATIC softmax.cu)
+# target_link_libraries(static_lib PUBLIC "${TORCH_LIBRARIES}")
+add_executable(softmax check.cu)
+target_link_libraries(softmax PRIVATE softmax_lib)
