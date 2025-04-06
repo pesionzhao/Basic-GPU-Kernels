@@ -92,12 +92,12 @@ setup(
 
 ![](./add/output.png)
 
-基准测试cuda算子的性能差一些，目前还不太清楚为什么，可能pytorch做了一些优化, 争取一天更新一个算子
+基准测试cuda算子的性能差一些，目前还不太清楚为什么....可能是因为我的优化做的不够?
 
 TODO
 
 - [ ] 矩阵转置的triton实现
-- [ ] 归约
-- [ ] softmax
+- [x] 归约
+- [x] softmax
 - [ ] GEMM
 - [ ] FlashAttention
